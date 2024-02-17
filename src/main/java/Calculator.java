@@ -1,2 +1,26 @@
-package PACKAGE_NAME;public class Calculator {
+//Написать класс Калькулятор (необобщенный),
+// который содержит обобщенные статические методы:
+// sum(), multiply(), divide(), subtract().
+// Параметры этих методов – два числа разного типа,
+// над которыми должна быть произведена операция.
+
+public class Calculator {
+
+    public static <T1 extends Number, T2 extends Number> double sum(T1 num1, T2 num2){
+        return num1.doubleValue() + num2.doubleValue();
+    }
+
+    public static <T1 extends Number, T2 extends Number> double multiply(T1 num1, T2 num2){
+        return num1.doubleValue() * num2.doubleValue();
+    }
+
+    public static <T1 extends Number, T2 extends Number> double divide(T1 num1, T2 num2){
+        return num1.doubleValue() / num2.doubleValue();
+    }
+
+    public static <T1 extends Number, T2 extends Number> double subtract(T1 num1, T2 num2){
+        return num1.doubleValue() - num2.doubleValue();
+    }
+
+
 }
